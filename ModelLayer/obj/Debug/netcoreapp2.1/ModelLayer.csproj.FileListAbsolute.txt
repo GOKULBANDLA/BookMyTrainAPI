@@ -1,0 +1,9 @@
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\bin\Debug\netcoreapp2.1\ModelLayer.deps.json
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\bin\Debug\netcoreapp2.1\ModelLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\bin\Debug\netcoreapp2.1\ModelLayer.pdb
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.csprojAssemblyReference.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.csproj.CoreCompileInputs.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.AssemblyInfoInputs.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.AssemblyInfo.cs
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\ModelLayer\obj\Debug\netcoreapp2.1\ModelLayer.pdb

@@ -1,0 +1,14 @@
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.deps.json
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\BusinessLayer.pdb
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.AssemblyInfoInputs.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.AssemblyInfo.cs
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.pdb
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csprojAssemblyReference.cache
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\DataLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\ModelLayer.dll
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\DataLayer.pdb
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\bin\Debug\netcoreapp2.1\ModelLayer.pdb
+D:\Angular\BookMyTrain\BookMyTrainAPI\BookMyTrain\BusinessLayer\obj\Debug\netcoreapp2.1\BusinessLayer.csproj.CopyComplete
