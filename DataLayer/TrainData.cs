@@ -53,18 +53,15 @@ namespace DataLayer
                 using (SqlConnection sqlConnection = new SqlConnection(_appSettings.Value.DbConnection))
                 {
                     await sqlConnection.OpenAsync();
-                    string command = "Select * from Bookings where source=" + source + " and destination=" + destination;
+                    string command = "Select trainId,Count(*) as 'count' from Bookings where source=" + source + " and destination=" + destination+" and dateOfJourney = '"+ date.ToString("yyyy-MM-dd")+ "' group by trainId";
                     SqlCommand cmd = new SqlCommand(command, sqlConnection);
                     SqlDataReader rdr = cmd.ExecuteReader();
 
                     while (rdr.Read())
                     {
                         BookingDetails booking = new BookingDetails();
-                        booking.BookingId = Convert.ToInt32(rdr["bookingId"]);
                         booking.TrainId = Convert.ToInt32(rdr["trainId"]);
-                        booking.Source = Convert.ToInt32(rdr["source"]);
-                        booking.Destination = Convert.ToInt32(rdr["destination"]);
-                        booking.DateOfJourney = rdr["dateOfJourney"].ToString();
+                        booking.Count = Convert.ToInt32(rdr["count"]);
                         lstBookings.Add(booking);
                     }
                     sqlConnection.Close();
@@ -121,10 +118,10 @@ namespace DataLayer
                     string command = "Insert Into dbo.Bookings (trainId, source, destination, dateOfJourney) " +
                    "VALUES (@trainId, @source, @destination, @date) ";
                     SqlCommand cmd = new SqlCommand(command, sqlConnection);
-                    cmd.Parameters.Add("@trainId", System.Data.SqlDbType.Int, 10).Value = trainId;
-                    cmd.Parameters.Add("@source", System.Data.SqlDbType.Int, 10).Value = source;
-                    cmd.Parameters.Add("@destination", System.Data.SqlDbType.Int, 10).Value = destination;
-                    cmd.Parameters.Add("@date", System.Data.SqlDbType.Date, 100).Value = dateOfJourney;
+                    cmd.Parameters.Add("@trainId", SqlDbType.Int, 100).Value = trainId;
+                    cmd.Parameters.Add("@source", SqlDbType.Int, 100).Value = source;
+                    cmd.Parameters.Add("@destination", SqlDbType.Int, 100).Value = destination;
+                    cmd.Parameters.Add("@date", SqlDbType.Date, 100).Value = dateOfJourney;
                    await cmd.ExecuteNonQueryAsync();
                     sqlConnection.Close();
                     return true;

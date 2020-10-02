@@ -1,0 +1,857 @@
+2020-10-02T13:00:04.2787165+05:30 0HM36KJT463EG:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:00:05.2540529+05:30 0HM36KJT463EG:00000001 [INF] Request finished in 978.074ms 404  (791a596a)
+2020-10-02T13:00:09.5702904+05:30 0HM36KJT463EI:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:00:09.6113798+05:30 0HM36KJT463EI:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:00:09.7686542+05:30 0HM36KJT463EI:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:00:09.8127868+05:30 0HM36KJT463EI:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:00:09.8484124+05:30 0HM36KJT463EI:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:00:10.5905666+05:30 0HM36KJT463EI:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 766.5236ms. (50a9e262)
+2020-10-02T13:00:10.6081477+05:30 0HM36KJT463EI:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:00:10.8127283+05:30 0HM36KJT463EI:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 1027.1257ms (afa2e885)
+2020-10-02T13:00:10.8330432+05:30 0HM36KJT463EI:00000001 [INF] Request finished in 1314.5079ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:00:18.3587586+05:30 0HM36KJT463EI:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:00:18.4830195+05:30 0HM36KJT463EI:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:00:18.4912999+05:30 0HM36KJT463EI:00000002 [INF] Request finished in 131.0452ms 204  (791a596a)
+2020-10-02T13:00:18.4963514+05:30 0HM36KJT463EI:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:00:18.5015654+05:30 0HM36KJT463EI:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:00:18.5249399+05:30 0HM36KJT463EI:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:00:18.6112659+05:30 0HM36KJT463EI:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:00:09 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:00:21.4575351+05:30 0HM36KJT463EI:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:00:22.3673631+05:30 0HM36KJT463EI:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3751.912ms. (50a9e262)
+2020-10-02T13:00:22.3726550+05:30 0HM36KJT463EI:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:00:22.3865824+05:30 0HM36KJT463EI:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 3857.2807ms (afa2e885)
+2020-10-02T13:00:22.3926501+05:30 0HM36KJT463EI:00000003 [INF] Request finished in 3895.7746ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:00:26.6929077+05:30 0HM36KJT463EI:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:00:26.6973909+05:30 0HM36KJT463EI:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:00:26.7092953+05:30 0HM36KJT463EI:00000004 [INF] Request finished in 9.3053ms 204  (791a596a)
+2020-10-02T13:00:26.7164412+05:30 0HM36KJT463EI:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:00:26.7239222+05:30 0HM36KJT463EI:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:00:26.7347249+05:30 0HM36KJT463EI:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:00:26.7429129+05:30 0HM36KJT463EI:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:00:09 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:00:29.9456689+05:30 0HM36KJT463EI:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:01:13.7645158+05:30 0HM36KJT463EI:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 47016.9228ms. (50a9e262)
+2020-10-02T13:01:13.7703053+05:30 0HM36KJT463EI:00000005 [INF] Executing ObjectResult, writing value of type '"System.Boolean"'. (8a1b66c8)
+2020-10-02T13:01:13.7764552+05:30 0HM36KJT463EI:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 47036.3145ms (afa2e885)
+2020-10-02T13:01:13.7843067+05:30 0HM36KJT463EI:00000005 [INF] Request finished in 47065.4997ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:08:50.6945282+05:30 0HM36KOQ28SOD:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:08:51.0792325+05:30 0HM36KOQ28SOD:00000001 [INF] Request finished in 388.4405ms 404  (791a596a)
+2020-10-02T13:12:59.3004154+05:30 0HM36KOQ28SOF:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:12:59.3142088+05:30 0HM36KOQ28SOF:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:12:59.4188714+05:30 0HM36KOQ28SOF:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:12:59.4473441+05:30 0HM36KOQ28SOF:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:12:59.4567827+05:30 0HM36KOQ28SOF:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:12:59.4641779+05:30 0HM36KOQ28SOF:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:12:59.6461580+05:30 0HM36KOQ28SOF:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 188.1895ms. (50a9e262)
+2020-10-02T13:12:59.6708283+05:30 0HM36KOQ28SOF:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:12:59.7744343+05:30 0HM36KOQ28SOF:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 343.572ms (afa2e885)
+2020-10-02T13:12:59.7884357+05:30 0HM36KOQ28SOF:00000001 [INF] Request finished in 488.1818ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:13:13.2923172+05:30 0HM36KOQ28SOF:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:13:13.2997467+05:30 0HM36KOQ28SOF:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:13:13.3070944+05:30 0HM36KOQ28SOF:00000002 [INF] Request finished in 14.9829ms 204  (791a596a)
+2020-10-02T13:13:13.3246386+05:30 0HM36KOQ28SOF:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:13:13.3360549+05:30 0HM36KOQ28SOF:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:13:13.3758835+05:30 0HM36KOQ28SOF:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:13:13.4709933+05:30 0HM36KOQ28SOF:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:12:59 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:13:15.5197097+05:30 0HM36KOQ28SOF:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:13:15.7003074+05:30 0HM36KOQ28SOF:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:13:15.8346072+05:30 0HM36KOQ28SOF:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2357.8666ms. (50a9e262)
+2020-10-02T13:13:15.8449357+05:30 0HM36KOQ28SOF:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:13:15.8585131+05:30 0HM36KOQ28SOF:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2464.2256ms (afa2e885)
+2020-10-02T13:13:15.8654961+05:30 0HM36KOQ28SOF:00000003 [INF] Request finished in 2545.399ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:13:20.5869594+05:30 0HM36KOQ28SOF:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:13:20.5915081+05:30 0HM36KOQ28SOF:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:13:20.5985769+05:30 0HM36KOQ28SOF:00000004 [INF] Request finished in 10.1107ms 204  (791a596a)
+2020-10-02T13:13:20.6038282+05:30 0HM36KOQ28SOF:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:13:20.6086435+05:30 0HM36KOQ28SOF:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:13:20.6219523+05:30 0HM36KOQ28SOF:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:13:20.6303107+05:30 0HM36KOQ28SOF:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:12:59 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:13:23.8533169+05:30 0HM36KOQ28SOF:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:13:30.1737473+05:30 0HM36KOQ28SOF:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:13:40.0665006+05:30 0HM36KOQ28SOF:00000005 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T13:14:42.8187637+05:30 0HM36KOQ28SOF:00000005 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:14:42.8267031+05:30 0HM36KOQ28SOF:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 82187.3871ms. (50a9e262)
+2020-10-02T13:14:42.8370731+05:30 0HM36KOQ28SOF:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:14:42.8543604+05:30 0HM36KOQ28SOF:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 82225.9636ms (afa2e885)
+2020-10-02T13:14:42.8651015+05:30 0HM36KOQ28SOF:00000005 [INF] Request finished in 82258.4844ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:16:00.2779880+05:30 0HM36KOQ28SOF:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:16:00.2846217+05:30 0HM36KOQ28SOF:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:16:00.2968918+05:30 0HM36KOQ28SOF:00000006 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:16:00.3102713+05:30 0HM36KOQ28SOF:00000006 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:16:00.3163754+05:30 0HM36KOQ28SOF:00000006 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:16:00.3253634+05:30 0HM36KOQ28SOF:00000006 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:16:00.3314636+05:30 0HM36KOQ28SOF:00000006 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 15.3353ms. (50a9e262)
+2020-10-02T13:16:00.3402116+05:30 0HM36KOQ28SOF:00000006 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:16:00.3496868+05:30 0HM36KOQ28SOF:00000006 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 45.5339ms (afa2e885)
+2020-10-02T13:16:00.3599949+05:30 0HM36KOQ28SOF:00000006 [INF] Request finished in 80.7116ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:16:29.4922874+05:30 0HM36KOQ28SOG:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:16:29.5033789+05:30 0HM36KOQ28SOG:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:16:29.5121744+05:30 0HM36KOQ28SOG:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:16:29.5472462+05:30 0HM36KOQ28SOG:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:16:29.5698729+05:30 0HM36KOQ28SOG:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:16:29.5800835+05:30 0HM36KOQ28SOG:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:16:29.5933158+05:30 0HM36KOQ28SOG:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 30.0507ms. (50a9e262)
+2020-10-02T13:16:29.6226696+05:30 0HM36KOQ28SOG:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:16:29.6626086+05:30 0HM36KOQ28SOG:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 111.1496ms (afa2e885)
+2020-10-02T13:16:29.6990469+05:30 0HM36KOQ28SOG:00000001 [INF] Request finished in 188.4435ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:17:57.6132421+05:30 0HM36KOQ28SOG:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:17:57.6212034+05:30 0HM36KOQ28SOG:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:17:57.6347349+05:30 0HM36KOQ28SOG:00000002 [INF] Request finished in 14.9891ms 204  (791a596a)
+2020-10-02T13:17:57.6426300+05:30 0HM36KOQ28SOG:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:17:57.6533062+05:30 0HM36KOQ28SOG:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:17:57.6601051+05:30 0HM36KOQ28SOG:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:17:57.6702821+05:30 0HM36KOQ28SOG:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:16:29 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:18:02.1679285+05:30 0HM36KOQ28SOG:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:18:06.0713893+05:30 0HM36KOQ28SOG:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:18:07.1641752+05:30 0HM36KOQ28SOG:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9487.405ms. (50a9e262)
+2020-10-02T13:18:07.1714942+05:30 0HM36KOQ28SOG:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:18:10.1917618+05:30 0HM36KOQ28SOG:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 12519.1419ms (afa2e885)
+2020-10-02T13:18:10.2164718+05:30 0HM36KOQ28SOG:00000003 [INF] Request finished in 12565.3467ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:18:14.5866290+05:30 0HM36KOQ28SOG:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:18:14.5915380+05:30 0HM36KOQ28SOG:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:18:14.6036763+05:30 0HM36KOQ28SOG:00000004 [INF] Request finished in 14.6281ms 204  (791a596a)
+2020-10-02T13:18:14.6126100+05:30 0HM36KOQ28SOG:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:18:14.6182936+05:30 0HM36KOQ28SOG:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:18:14.6290356+05:30 0HM36KOQ28SOG:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:18:14.6380247+05:30 0HM36KOQ28SOG:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:16:29 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:18:16.9991189+05:30 0HM36KOQ28SOG:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:18:20.4916437+05:30 0HM36KOQ28SOG:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:18:27.1901624+05:30 0HM36KOQ28SOG:00000005 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T13:19:27.5756113+05:30 0HM36KUNT3RI4:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:19:28.0572592+05:30 0HM36KUNT3RI4:00000001 [INF] Request finished in 480.6938ms 404  (791a596a)
+2020-10-02T13:20:28.0984971+05:30 0HM36KUNT3RI6:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:20:28.1245245+05:30 0HM36KUNT3RI6:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:20:28.2109000+05:30 0HM36KUNT3RI6:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:20:28.2416962+05:30 0HM36KUNT3RI6:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:20:28.2486358+05:30 0HM36KUNT3RI6:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:20:28.2577581+05:30 0HM36KUNT3RI6:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:20:28.4787843+05:30 0HM36KUNT3RI6:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 226.1673ms. (50a9e262)
+2020-10-02T13:20:28.5112122+05:30 0HM36KUNT3RI6:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:20:28.6241106+05:30 0HM36KUNT3RI6:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 397.4146ms (afa2e885)
+2020-10-02T13:20:28.6603275+05:30 0HM36KUNT3RI6:00000001 [INF] Request finished in 553.0978ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:20:36.2400538+05:30 0HM36KUNT3RI6:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:20:36.2534795+05:30 0HM36KUNT3RI6:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:20:36.2612266+05:30 0HM36KUNT3RI6:00000002 [INF] Request finished in 20.4984ms 204  (791a596a)
+2020-10-02T13:20:36.2763710+05:30 0HM36KUNT3RI6:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:20:36.2852097+05:30 0HM36KUNT3RI6:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:20:36.3121588+05:30 0HM36KUNT3RI6:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:20:36.3718346+05:30 0HM36KUNT3RI6:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 2,
+  \"dateOfJourney\": \"10/2/2020, 1:20:28 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:20:38.7734814+05:30 0HM36KUNT3RI6:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:20:38.9583836+05:30 0HM36KUNT3RI6:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:20:39.1119973+05:30 0HM36KUNT3RI6:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2734.7957ms. (50a9e262)
+2020-10-02T13:20:39.1197685+05:30 0HM36KUNT3RI6:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:20:39.1345380+05:30 0HM36KUNT3RI6:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2816.6121ms (afa2e885)
+2020-10-02T13:20:39.1409724+05:30 0HM36KUNT3RI6:00000003 [INF] Request finished in 2864.5001ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:20:43.4066030+05:30 0HM36KUNT3RI6:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:20:43.4111165+05:30 0HM36KUNT3RI6:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:20:43.4183372+05:30 0HM36KUNT3RI6:00000004 [INF] Request finished in 9.5964ms 204  (791a596a)
+2020-10-02T13:20:43.4232731+05:30 0HM36KUNT3RI6:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 174 (ca22a1cb)
+2020-10-02T13:20:43.4284523+05:30 0HM36KUNT3RI6:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:20:43.4394716+05:30 0HM36KUNT3RI6:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:20:43.4468255+05:30 0HM36KUNT3RI6:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 2,
+  \"dateOfJourney\": \"10/2/2020, 1:20:28 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Chittoor\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:20:58.5885396+05:30 0HM36KUNT3RI6:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:20:58.6360418+05:30 0HM36KUNT3RI6:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:21:01.4946919+05:30 0HM36KUNT3RI6:00000005 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T13:22:33.0950362+05:30 0HM36KUNT3RI6:00000005 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:22:33.1050416+05:30 0HM36KUNT3RI6:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 109646.7197ms. (50a9e262)
+2020-10-02T13:22:33.1122911+05:30 0HM36KUNT3RI6:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:22:33.1215172+05:30 0HM36KUNT3RI6:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 109673.7669ms (afa2e885)
+2020-10-02T13:22:33.1389228+05:30 0HM36KUNT3RI6:00000005 [INF] Request finished in 109707.0183ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:22:38.9834407+05:30 0HM36KUNT3RI6:00000006 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:22:38.9885475+05:30 0HM36KUNT3RI6:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:22:38.9956700+05:30 0HM36KUNT3RI6:00000006 [INF] Request finished in 10.9948ms 204  (791a596a)
+2020-10-02T13:22:39.0013136+05:30 0HM36KUNT3RI6:00000007 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 174 (ca22a1cb)
+2020-10-02T13:22:39.0057507+05:30 0HM36KUNT3RI6:00000007 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:22:39.0138934+05:30 0HM36KUNT3RI6:00000007 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:22:39.0201528+05:30 0HM36KUNT3RI6:00000007 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 2,
+  \"dateOfJourney\": \"10/2/2020, 1:20:28 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Chittoor\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:22:41.0699917+05:30 0HM36KUNT3RI6:00000007 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:22:41.0831402+05:30 0HM36KUNT3RI6:00000007 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:22:43.0957991+05:30 0HM36KUNT3RI6:00000007 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T13:23:07.2758013+05:30 0HM36KUNT3RI6:00000007 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:23:07.2804986+05:30 0HM36KUNT3RI6:00000007 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 28255.682ms. (50a9e262)
+2020-10-02T13:23:07.2850346+05:30 0HM36KUNT3RI6:00000007 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:23:07.2913093+05:30 0HM36KUNT3RI6:00000007 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 28270.3988ms (afa2e885)
+2020-10-02T13:23:07.3050117+05:30 0HM36KUNT3RI6:00000007 [INF] Request finished in 28302.7639ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:33:49.6518085+05:30 0HM36L6OP89E9:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:33:50.2402833+05:30 0HM36L6OP89E9:00000001 [INF] Request finished in 592.6271ms 404  (791a596a)
+2020-10-02T13:34:06.4032543+05:30 0HM36L6OP89EB:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:34:06.4114586+05:30 0HM36L6OP89EB:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:06.5296315+05:30 0HM36L6OP89EB:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:34:06.5551969+05:30 0HM36L6OP89EB:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:34:06.5651058+05:30 0HM36L6OP89EB:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:34:06.5709761+05:30 0HM36L6OP89EB:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:34:06.7109724+05:30 0HM36L6OP89EB:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 143.3274ms. (50a9e262)
+2020-10-02T13:34:06.7352590+05:30 0HM36L6OP89EB:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:34:06.8445719+05:30 0HM36L6OP89EB:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 302.6455ms (afa2e885)
+2020-10-02T13:34:06.8667568+05:30 0HM36L6OP89EB:00000001 [INF] Request finished in 459.8203ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:34:16.7920168+05:30 0HM36L6OP89EB:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:34:16.7982406+05:30 0HM36L6OP89EB:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:16.8036005+05:30 0HM36L6OP89EB:00000002 [INF] Request finished in 13.2552ms 204  (791a596a)
+2020-10-02T13:34:16.8145759+05:30 0HM36L6OP89EB:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:34:16.8184833+05:30 0HM36L6OP89EB:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:16.8430093+05:30 0HM36L6OP89EB:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:34:16.9028952+05:30 0HM36L6OP89EB:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 2,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:34:06 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:34:18.9535644+05:30 0HM36L6OP89EB:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:34:19.1301490+05:30 0HM36L6OP89EB:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:34:19.2644415+05:30 0HM36L6OP89EB:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2354.015ms. (50a9e262)
+2020-10-02T13:34:19.2690328+05:30 0HM36L6OP89EB:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:34:19.2808631+05:30 0HM36L6OP89EB:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2433.1018ms (afa2e885)
+2020-10-02T13:34:19.2858638+05:30 0HM36L6OP89EB:00000003 [INF] Request finished in 2470.465ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:34:23.7336285+05:30 0HM36L6OP89EB:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:34:23.7407287+05:30 0HM36L6OP89EB:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:23.7501041+05:30 0HM36L6OP89EB:00000004 [INF] Request finished in 14.9818ms 204  (791a596a)
+2020-10-02T13:34:23.7597802+05:30 0HM36L6OP89EB:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:34:23.7648147+05:30 0HM36L6OP89EB:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:23.7696821+05:30 0HM36L6OP89EB:00000005 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:34:23.7783525+05:30 0HM36L6OP89EB:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:34:06 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:34:25.5140671+05:30 0HM36L6OP89EB:00000005 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:34:25.5189898+05:30 0HM36L6OP89EB:00000005 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:34:25.5453155+05:30 0HM36L6OP89EB:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1753.1102ms. (50a9e262)
+2020-10-02T13:34:25.5569620+05:30 0HM36L6OP89EB:00000005 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:34:25.5690437+05:30 0HM36L6OP89EB:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 1788.3753ms (afa2e885)
+2020-10-02T13:34:25.5752958+05:30 0HM36L6OP89EB:00000005 [INF] Request finished in 1818.1581ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:34:28.0328439+05:30 0HM36L6OP89EB:00000006 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:34:28.0391175+05:30 0HM36L6OP89EB:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:28.0454682+05:30 0HM36L6OP89EB:00000006 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:34:28.0504578+05:30 0HM36L6OP89EB:00000006 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:34:06 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:34:29.6645029+05:30 0HM36L6OP89EB:00000006 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:34:29.6693297+05:30 0HM36L6OP89EB:00000006 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:34:29.6777498+05:30 0HM36L6OP89EB:00000006 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1622.1621ms. (50a9e262)
+2020-10-02T13:34:29.6832909+05:30 0HM36L6OP89EB:00000006 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:34:29.6892478+05:30 0HM36L6OP89EB:00000006 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 1638.3476ms (afa2e885)
+2020-10-02T13:34:29.6973951+05:30 0HM36L6OP89EB:00000006 [INF] Request finished in 1662.3428ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:34:34.7312514+05:30 0HM36L6OP89EB:00000007 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:34:34.7367204+05:30 0HM36L6OP89EB:00000007 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:34.7474875+05:30 0HM36L6OP89EB:00000007 [INF] Request finished in 15.2146ms 204  (791a596a)
+2020-10-02T13:34:34.7522438+05:30 0HM36L6OP89EB:00000008 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:34:34.7640851+05:30 0HM36L6OP89EB:00000008 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:34:34.7754694+05:30 0HM36L6OP89EB:00000008 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:34:34.7806235+05:30 0HM36L6OP89EB:00000008 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:34:06 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:34:37.0725005+05:30 0HM36L6OP89EB:00000008 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:34:37.1095678+05:30 0HM36L6OP89EB:00000008 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:34:40.0558548+05:30 0HM36L6OP89EB:00000008 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T13:36:13.7123016+05:30 0HM36L83PF7GK:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:36:14.0291358+05:30 0HM36L83PF7GK:00000001 [INF] Request finished in 321.3262ms 0  (791a596a)
+2020-10-02T13:36:28.2366652+05:30 0HM36L83PF7GL:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:36:28.2480500+05:30 0HM36L83PF7GL:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:28.3952742+05:30 0HM36L83PF7GL:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:36:28.4231066+05:30 0HM36L83PF7GL:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:36:28.4335713+05:30 0HM36L83PF7GL:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:36:28.4388717+05:30 0HM36L83PF7GL:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:36:28.7389224+05:30 0HM36L83PF7GL:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 299.8756ms. (50a9e262)
+2020-10-02T13:36:28.7881239+05:30 0HM36L83PF7GL:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:36:28.9179014+05:30 0HM36L83PF7GL:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 506.7982ms (afa2e885)
+2020-10-02T13:36:28.9386648+05:30 0HM36L83PF7GL:00000001 [INF] Request finished in 699.4391ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:36:40.9007293+05:30 0HM36L83PF7GL:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:36:40.9086277+05:30 0HM36L83PF7GL:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:40.9278968+05:30 0HM36L83PF7GL:00000002 [INF] Request finished in 27.6879ms 204  (791a596a)
+2020-10-02T13:36:40.9429547+05:30 0HM36L83PF7GL:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:36:40.9526182+05:30 0HM36L83PF7GL:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:40.9765269+05:30 0HM36L83PF7GL:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:36:41.0357549+05:30 0HM36L83PF7GL:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:36:28 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:36:42.8441596+05:30 0HM36L83PF7GL:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:36:43.0610425+05:30 0HM36L83PF7GL:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:36:43.2173159+05:30 0HM36L83PF7GL:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2177.7815ms. (50a9e262)
+2020-10-02T13:36:43.2219025+05:30 0HM36L83PF7GL:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:36:43.2372823+05:30 0HM36L83PF7GL:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2254.8478ms (afa2e885)
+2020-10-02T13:36:43.2449680+05:30 0HM36L83PF7GL:00000003 [INF] Request finished in 2302.1596ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:36:47.7368229+05:30 0HM36L83PF7GL:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:36:47.7412996+05:30 0HM36L83PF7GL:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:47.7500394+05:30 0HM36L83PF7GL:00000004 [INF] Request finished in 9.0024ms 204  (791a596a)
+2020-10-02T13:36:47.7550806+05:30 0HM36L83PF7GL:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:36:47.7599612+05:30 0HM36L83PF7GL:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:47.7720403+05:30 0HM36L83PF7GL:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:36:47.7820082+05:30 0HM36L83PF7GL:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:36:28 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:36:49.7656743+05:30 0HM36L83PF7GL:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:36:49.8064918+05:30 0HM36L83PF7GL:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:36:50.2588062+05:30 0HM36L83PF7GL:00000005 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:36:50.2690715+05:30 0HM36L83PF7GL:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 2479.9287ms. (50a9e262)
+2020-10-02T13:36:50.2748861+05:30 0HM36L83PF7GL:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:36:50.2843420+05:30 0HM36L83PF7GL:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 2505.3843ms (afa2e885)
+2020-10-02T13:36:50.2984519+05:30 0HM36L83PF7GL:00000005 [INF] Request finished in 2535.7677ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:36:50.3325339+05:30 0HM36L83PF7GL:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:36:50.3408637+05:30 0HM36L83PF7GL:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:36:50.3660790+05:30 0HM36L83PF7GL:00000006 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:36:50.3769773+05:30 0HM36L83PF7GL:00000006 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:36:50.3931724+05:30 0HM36L83PF7GL:00000006 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:36:50.4003675+05:30 0HM36L83PF7GL:00000006 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:36:50.4242875+05:30 0HM36L83PF7GL:00000006 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 27.3892ms. (50a9e262)
+2020-10-02T13:36:50.4394746+05:30 0HM36L83PF7GL:00000006 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:36:50.4554295+05:30 0HM36L83PF7GL:00000006 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 73.3439ms (afa2e885)
+2020-10-02T13:36:50.4660399+05:30 0HM36L83PF7GL:00000006 [INF] Request finished in 136.5988ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:37:54.7589801+05:30 0HM36L83PF7GL:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:37:54.7673763+05:30 0HM36L83PF7GL:00000007 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:37:54.8309899+05:30 0HM36L83PF7GL:00000007 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:37:54.8827762+05:30 0HM36L83PF7GL:00000007 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:37:54.8972892+05:30 0HM36L83PF7GL:00000007 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:37:54.9173704+05:30 0HM36L83PF7GL:00000007 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:37:54.9318380+05:30 0HM36L83PF7GL:00000007 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 41.6799ms. (50a9e262)
+2020-10-02T13:37:54.9383613+05:30 0HM36L83PF7GL:00000007 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:37:54.9516373+05:30 0HM36L83PF7GL:00000007 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 74.705ms (afa2e885)
+2020-10-02T13:37:54.9722104+05:30 0HM36L83PF7GL:00000007 [INF] Request finished in 218.6694ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:38:02.8841385+05:30 0HM36L83PF7GL:00000008 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:38:02.8914431+05:30 0HM36L83PF7GL:00000008 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:02.8961822+05:30 0HM36L83PF7GL:00000008 [INF] Request finished in 11.7633ms 204  (791a596a)
+2020-10-02T13:38:02.9012454+05:30 0HM36L83PF7GL:00000009 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:38:02.9094383+05:30 0HM36L83PF7GL:00000009 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:02.9138082+05:30 0HM36L83PF7GL:00000009 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:38:02.9194821+05:30 0HM36L83PF7GL:00000009 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:37:54 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:38:04.9603324+05:30 0HM36L83PF7GL:00000009 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:38:04.9800657+05:30 0HM36L83PF7GL:00000009 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:38:05.1146743+05:30 0HM36L83PF7GL:00000009 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2187.1115ms. (50a9e262)
+2020-10-02T13:38:05.1187341+05:30 0HM36L83PF7GL:00000009 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:38:05.1235469+05:30 0HM36L83PF7GL:00000009 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2204.3962ms (afa2e885)
+2020-10-02T13:38:05.1282478+05:30 0HM36L83PF7GL:00000009 [INF] Request finished in 2226.7203ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:38:10.6021738+05:30 0HM36L83PF7GL:0000000A [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:38:10.6123883+05:30 0HM36L83PF7GL:0000000A [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:10.6205341+05:30 0HM36L83PF7GL:0000000A [INF] Request finished in 21.2698ms 204  (791a596a)
+2020-10-02T13:38:10.6284310+05:30 0HM36L83PF7GL:0000000B [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:38:10.6345524+05:30 0HM36L83PF7GL:0000000B [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:10.6418897+05:30 0HM36L83PF7GL:0000000B [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:38:10.6466484+05:30 0HM36L83PF7GL:0000000B [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:37:54 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:38:12.3264996+05:30 0HM36L83PF7GL:0000000B [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:38:12.3314508+05:30 0HM36L83PF7GL:0000000B [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:38:12.4840739+05:30 0HM36L83PF7GL:0000000B [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:38:12.4890052+05:30 0HM36L83PF7GL:0000000B [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1837.5198ms. (50a9e262)
+2020-10-02T13:38:12.4935414+05:30 0HM36L83PF7GL:0000000B [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:38:12.4989084+05:30 0HM36L83PF7GL:0000000B [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 1852.4343ms (afa2e885)
+2020-10-02T13:38:12.5063176+05:30 0HM36L83PF7GL:0000000B [INF] Request finished in 1875.6349ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:38:12.6098544+05:30 0HM36L83PF7GL:0000000C [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:38:12.6280487+05:30 0HM36L83PF7GL:0000000C [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:12.6346989+05:30 0HM36L83PF7GL:0000000C [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:38:12.6439659+05:30 0HM36L83PF7GL:0000000C [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:38:12.6505388+05:30 0HM36L83PF7GL:0000000C [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:38:12.6590036+05:30 0HM36L83PF7GL:0000000C [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:38:12.6661155+05:30 0HM36L83PF7GL:0000000C [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 15.8285ms. (50a9e262)
+2020-10-02T13:38:12.6728971+05:30 0HM36L83PF7GL:0000000C [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:38:12.6833501+05:30 0HM36L83PF7GL:0000000C [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 42.3798ms (afa2e885)
+2020-10-02T13:38:12.6981952+05:30 0HM36L83PF7GL:0000000C [INF] Request finished in 102.0272ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:38:48.3557439+05:30 0HM36L83PF7GL:0000000D [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:38:48.3603038+05:30 0HM36L83PF7GL:0000000D [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:48.3923077+05:30 0HM36L83PF7GL:0000000D [INF] Request finished in 10.8519ms 204  (791a596a)
+2020-10-02T13:38:48.4072582+05:30 0HM36L83PF7GL:0000000E [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:38:48.4115295+05:30 0HM36L83PF7GL:0000000E [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:48.4169447+05:30 0HM36L83PF7GL:0000000E [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:38:48.4251282+05:30 0HM36L83PF7GL:0000000E [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:38:12 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:38:50.1311952+05:30 0HM36L83PF7GL:0000000E [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:38:50.1381818+05:30 0HM36L83PF7GL:0000000E [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:38:50.1498768+05:30 0HM36L83PF7GL:0000000E [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 1717.3614ms. (50a9e262)
+2020-10-02T13:38:50.1704966+05:30 0HM36L83PF7GL:0000000E [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:38:50.1798483+05:30 0HM36L83PF7GL:0000000E [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 1754.213ms (afa2e885)
+2020-10-02T13:38:50.2231728+05:30 0HM36L83PF7GL:0000000E [INF] Request finished in 1781.14ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:38:54.4221170+05:30 0HM36L83PF7GL:0000000F [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:38:54.4272083+05:30 0HM36L83PF7GL:0000000F [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:54.4329090+05:30 0HM36L83PF7GL:0000000F [INF] Request finished in 10.0288ms 204  (791a596a)
+2020-10-02T13:38:54.4421985+05:30 0HM36L83PF7GL:00000010 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:38:54.4462959+05:30 0HM36L83PF7GL:00000010 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:38:54.4510685+05:30 0HM36L83PF7GL:00000010 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:38:54.4574927+05:30 0HM36L83PF7GL:00000010 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:38:12 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:38:56.6531815+05:30 0HM36L83PF7GL:00000010 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:39:01.0428132+05:30 0HM36L83PF7GL:00000010 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:40:12.5612980+05:30 0HM36L83PF7GL:00000010 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:40:12.5697936+05:30 0HM36L83PF7GL:00000010 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 78106.6768ms. (50a9e262)
+2020-10-02T13:40:12.5747329+05:30 0HM36L83PF7GL:00000010 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:40:12.5958759+05:30 0HM36L83PF7GL:00000010 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 78125.2704ms (afa2e885)
+2020-10-02T13:40:12.6149017+05:30 0HM36L83PF7GL:00000010 [INF] Request finished in 78165.2373ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:40:12.6745159+05:30 0HM36L83PF7GL:00000011 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:40:12.6877551+05:30 0HM36L83PF7GL:00000011 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:40:12.6978439+05:30 0HM36L83PF7GL:00000011 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:40:12.7085283+05:30 0HM36L83PF7GL:00000011 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:40:12.7216028+05:30 0HM36L83PF7GL:00000011 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:40:12.7278968+05:30 0HM36L83PF7GL:00000011 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:40:12.7431805+05:30 0HM36L83PF7GL:00000011 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 20.9321ms. (50a9e262)
+2020-10-02T13:40:12.7554722+05:30 0HM36L83PF7GL:00000011 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:40:12.7701032+05:30 0HM36L83PF7GL:00000011 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 56.8281ms (afa2e885)
+2020-10-02T13:40:12.7905043+05:30 0HM36L83PF7GL:00000011 [INF] Request finished in 106.0111ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:41:23.1147825+05:30 0HM36L83PF7GL:00000012 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:41:23.1186383+05:30 0HM36L83PF7GL:00000012 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:41:23.1299922+05:30 0HM36L83PF7GL:00000012 [INF] Request finished in 8.3105ms 204  (791a596a)
+2020-10-02T13:41:23.1342733+05:30 0HM36L83PF7GL:00000013 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:41:23.1390584+05:30 0HM36L83PF7GL:00000013 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:41:23.1455194+05:30 0HM36L83PF7GL:00000013 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:41:23.1505599+05:30 0HM36L83PF7GL:00000013 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:40:12 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:41:36.2289391+05:30 0HM36L83PF7GL:00000013 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:41:36.2477929+05:30 0HM36L83PF7GL:00000013 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:41:36.3736558+05:30 0HM36L83PF7GL:00000013 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 13217.7816ms. (50a9e262)
+2020-10-02T13:41:36.3783941+05:30 0HM36L83PF7GL:00000013 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:41:36.3831335+05:30 0HM36L83PF7GL:00000013 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 13232.8468ms (afa2e885)
+2020-10-02T13:41:36.3885311+05:30 0HM36L83PF7GL:00000013 [INF] Request finished in 13253.4384ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:41:40.4539728+05:30 0HM36L83PF7GL:00000014 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T13:41:40.4612746+05:30 0HM36L83PF7GL:00000014 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:41:40.4682154+05:30 0HM36L83PF7GL:00000014 [INF] Request finished in 12.0127ms 204  (791a596a)
+2020-10-02T13:41:40.4771961+05:30 0HM36L83PF7GL:00000015 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T13:41:40.4829662+05:30 0HM36L83PF7GL:00000015 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:41:40.4893442+05:30 0HM36L83PF7GL:00000015 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:41:40.4980585+05:30 0HM36L83PF7GL:00000015 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:40:12 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:41:42.6007540+05:30 0HM36L83PF7GL:00000015 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T13:41:48.5972834+05:30 0HM36L83PF7GL:00000015 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T13:43:52.6264105+05:30 0HM36L83PF7GL:00000015 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T13:43:52.6334381+05:30 0HM36L83PF7GL:00000015 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 132128.1488ms. (50a9e262)
+2020-10-02T13:43:52.6386785+05:30 0HM36L83PF7GL:00000015 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T13:43:52.6455263+05:30 0HM36L83PF7GL:00000015 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 132147.0646ms (afa2e885)
+2020-10-02T13:43:52.6636253+05:30 0HM36L83PF7GL:00000015 [INF] Request finished in 132183.264ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T13:44:26.1167630+05:30 0HM36L83PF7GL:00000016 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:44:26.1216206+05:30 0HM36L83PF7GL:00000016 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:44:26.1265164+05:30 0HM36L83PF7GL:00000016 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:44:26.1331329+05:30 0HM36L83PF7GL:00000016 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:44:26.1382148+05:30 0HM36L83PF7GL:00000016 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:44:26.1436339+05:30 0HM36L83PF7GL:00000016 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:44:26.1486434+05:30 0HM36L83PF7GL:00000016 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 10.6695ms. (50a9e262)
+2020-10-02T13:44:26.1525064+05:30 0HM36L83PF7GL:00000016 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:44:26.1582330+05:30 0HM36L83PF7GL:00000016 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 25.3887ms (afa2e885)
+2020-10-02T13:44:26.1669245+05:30 0HM36L83PF7GL:00000016 [INF] Request finished in 47.3725ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:45:23.7925212+05:30 0HM36L83PF7GL:00000017 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T13:45:23.8329842+05:30 0HM36L83PF7GL:00000017 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:45:23.8390926+05:30 0HM36L83PF7GL:00000017 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:45:23.8513749+05:30 0HM36L83PF7GL:00000017 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T13:45:23.8632231+05:30 0HM36L83PF7GL:00000017 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T13:45:23.8698686+05:30 0HM36L83PF7GL:00000017 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T13:45:23.8844435+05:30 0HM36L83PF7GL:00000017 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 24.9353ms. (50a9e262)
+2020-10-02T13:45:23.8953816+05:30 0HM36L83PF7GL:00000017 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:45:23.9394939+05:30 0HM36L83PF7GL:00000017 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 73.054ms (afa2e885)
+2020-10-02T13:45:23.9516381+05:30 0HM36L83PF7GL:00000017 [INF] Request finished in 167.9601ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T13:59:26.9723949+05:30 0HM36LL30T7LJ:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T13:59:27.4916217+05:30 0HM36LL30T7LJ:00000001 [INF] Request finished in 517.0419ms 404  (791a596a)
+2020-10-02T13:59:47.3888499+05:30 0HM36LL30T7LL:00000001 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T13:59:47.3998424+05:30 0HM36LL30T7LL:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:59:47.4077588+05:30 0HM36LL30T7LL:00000001 [INF] Request finished in 17.5486ms 204  (791a596a)
+2020-10-02T13:59:47.4164228+05:30 0HM36LL30T7LL:00000002 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T13:59:47.4225275+05:30 0HM36LL30T7LL:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T13:59:47.4923423+05:30 0HM36LL30T7LL:00000002 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T13:59:47.6372746+05:30 0HM36LL30T7LL:00000002 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T13:59:51.1567028+05:30 0HM36LL30T7LL:00000002 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T13:59:51.3665996+05:30 0HM36LL30T7LL:00000002 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T13:59:51.6491276+05:30 0HM36LL30T7LL:00000002 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4002.5947ms. (50a9e262)
+2020-10-02T13:59:51.6706889+05:30 0HM36LL30T7LL:00000002 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T13:59:51.7287626+05:30 0HM36LL30T7LL:00000002 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 4222.5371ms (afa2e885)
+2020-10-02T13:59:51.7482255+05:30 0HM36LL30T7LL:00000002 [INF] Request finished in 4331.6555ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:00:02.5908975+05:30 0HM36LL30T7LL:00000003 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:00:02.5995284+05:30 0HM36LL30T7LL:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:02.6062023+05:30 0HM36LL30T7LL:00000003 [INF] Request finished in 13.8256ms 204  (791a596a)
+2020-10-02T14:00:02.6141384+05:30 0HM36LL30T7LL:00000004 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:00:02.6194690+05:30 0HM36LL30T7LL:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:02.6372682+05:30 0HM36LL30T7LL:00000004 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:00:02.6526755+05:30 0HM36LL30T7LL:00000004 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:00:05.8471653+05:30 0HM36LL30T7LL:00000004 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:00:05.8805865+05:30 0HM36LL30T7LL:00000004 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:00:06.1104821+05:30 0HM36LL30T7LL:00000004 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:00:06.1195481+05:30 0HM36LL30T7LL:00000004 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 3458.9108ms. (50a9e262)
+2020-10-02T14:00:06.1562430+05:30 0HM36LL30T7LL:00000004 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:00:06.1633461+05:30 0HM36LL30T7LL:00000004 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 3519.3793ms (afa2e885)
+2020-10-02T14:00:06.1709419+05:30 0HM36LL30T7LL:00000004 [INF] Request finished in 3558.0819ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:00:17.2629944+05:30 0HM36LL30T7LL:00000005 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:00:17.2668064+05:30 0HM36LL30T7LL:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:17.2729897+05:30 0HM36LL30T7LL:00000005 [INF] Request finished in 8.4025ms 204  (791a596a)
+2020-10-02T14:00:17.2819948+05:30 0HM36LL30T7LL:00000006 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:00:17.2868408+05:30 0HM36LL30T7LL:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:17.2937484+05:30 0HM36LL30T7LL:00000006 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:00:17.2984609+05:30 0HM36LL30T7LL:00000006 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:00:19.5937494+05:30 0HM36LL30T7LL:00000006 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:00:22.8733430+05:30 0HM36LL30T7LL:00000006 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:00:53.9252420+05:30 0HM36LL30T7LL:00000006 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:00:53.9301511+05:30 0HM36LL30T7LL:00000006 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 36626.0049ms. (50a9e262)
+2020-10-02T14:00:53.9351471+05:30 0HM36LL30T7LL:00000006 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:00:53.9412707+05:30 0HM36LL30T7LL:00000006 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 36641.9605ms (afa2e885)
+2020-10-02T14:00:53.9650856+05:30 0HM36LL30T7LL:00000006 [INF] Request finished in 36670.8541ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:00:57.8653329+05:30 0HM36LL30T7LL:00000007 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:00:57.8700412+05:30 0HM36LL30T7LL:00000007 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:57.8836528+05:30 0HM36LL30T7LL:00000007 [INF] Request finished in 17.5399ms 204  (791a596a)
+2020-10-02T14:00:57.8975683+05:30 0HM36LL30T7LL:00000008 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:00:57.9074841+05:30 0HM36LL30T7LL:00000008 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:00:57.9150749+05:30 0HM36LL30T7LL:00000008 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:00:57.9239013+05:30 0HM36LL30T7LL:00000008 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:01:01.3866711+05:30 0HM36LL30T7LL:00000008 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:01:08.6626938+05:30 0HM36LL30T7LL:00000008 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:02:36.7935399+05:30 0HM36LL30T7LL:00000008 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:02:37.4991430+05:30 0HM36LL30T7LL:00000008 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 99569.3913ms. (50a9e262)
+2020-10-02T14:02:37.5038594+05:30 0HM36LL30T7LL:00000008 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:02:37.5082425+05:30 0HM36LL30T7LL:00000008 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 99588.8562ms (afa2e885)
+2020-10-02T14:02:37.5136203+05:30 0HM36LL30T7LL:00000008 [INF] Request finished in 99618.076ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:02:41.8595440+05:30 0HM36LL30T7LL:00000009 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:02:41.8699551+05:30 0HM36LL30T7LL:00000009 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:02:41.9210400+05:30 0HM36LL30T7LL:00000009 [INF] Request finished in 59.7639ms 204  (791a596a)
+2020-10-02T14:02:41.9342107+05:30 0HM36LL30T7LL:0000000A [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:02:41.9386577+05:30 0HM36LL30T7LL:0000000A [INF] Policy execution successful. (0204925d)
+2020-10-02T14:02:41.9451676+05:30 0HM36LL30T7LL:0000000A [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:02:41.9532358+05:30 0HM36LL30T7LL:0000000A [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:02:45.2382814+05:30 0HM36LL30T7LL:0000000A [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:02:47.3457177+05:30 0HM36LL30T7LL:0000000A [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:03:45.9143843+05:30 0HM36LL30T7LL:0000000A [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:03:45.9286023+05:30 0HM36LL30T7LL:0000000A [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 63964.9112ms. (50a9e262)
+2020-10-02T14:03:45.9347622+05:30 0HM36LL30T7LL:0000000A [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:03:45.9894269+05:30 0HM36LL30T7LL:0000000A [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 64033.7548ms (afa2e885)
+2020-10-02T14:03:46.0361956+05:30 0HM36LL30T7LL:0000000A [INF] Request finished in 64067.0855ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:03:49.4550882+05:30 0HM36LL30T7LL:0000000B [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:03:49.4652934+05:30 0HM36LL30T7LL:0000000B [INF] Policy execution successful. (0204925d)
+2020-10-02T14:03:49.4719412+05:30 0HM36LL30T7LL:0000000B [INF] Request finished in 16.5685ms 204  (791a596a)
+2020-10-02T14:03:49.4841106+05:30 0HM36LL30T7LL:0000000C [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:03:49.4907176+05:30 0HM36LL30T7LL:0000000C [INF] Policy execution successful. (0204925d)
+2020-10-02T14:03:49.5013366+05:30 0HM36LL30T7LL:0000000C [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:03:49.5148193+05:30 0HM36LL30T7LL:0000000C [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 1:45:23 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:03:52.2355443+05:30 0HM36LL30T7LL:0000000C [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:03:52.2628238+05:30 0HM36LL30T7LL:0000000C [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:04:04.8896894+05:30 0HM36LL30T7LL:0000000C [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T14:08:30.7929467+05:30 0HM36LQ4UBK72:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T14:08:31.3132593+05:30 0HM36LQ4UBK72:00000001 [INF] Request finished in 525.9223ms 404  (791a596a)
+2020-10-02T14:08:47.2563323+05:30 0HM36LQ4UBK74:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T14:08:47.2916255+05:30 0HM36LQ4UBK74:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:08:47.4394999+05:30 0HM36LQ4UBK74:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:08:47.4792034+05:30 0HM36LQ4UBK74:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T14:08:47.4985647+05:30 0HM36LQ4UBK74:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T14:08:47.5096282+05:30 0HM36LQ4UBK74:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T14:08:48.0518357+05:30 0HM36LQ4UBK74:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 560.9213ms. (50a9e262)
+2020-10-02T14:08:48.0767489+05:30 0HM36LQ4UBK74:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:08:48.2120775+05:30 0HM36LQ4UBK74:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 760.5462ms (afa2e885)
+2020-10-02T14:08:48.2274972+05:30 0HM36LQ4UBK74:00000001 [INF] Request finished in 982.9161ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:08:55.5447638+05:30 0HM36LQ4UBK74:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T14:08:55.5591488+05:30 0HM36LQ4UBK74:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:08:55.5821316+05:30 0HM36LQ4UBK74:00000002 [INF] Request finished in 26.7549ms 204  (791a596a)
+2020-10-02T14:08:55.5974186+05:30 0HM36LQ4UBK74:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T14:08:55.6104746+05:30 0HM36LQ4UBK74:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:08:55.6678162+05:30 0HM36LQ4UBK74:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:08:55.7499929+05:30 0HM36LQ4UBK74:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:08:47 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:08:57.8425183+05:30 0HM36LQ4UBK74:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T14:08:58.0406456+05:30 0HM36LQ4UBK74:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T14:08:58.1915902+05:30 0HM36LQ4UBK74:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2435.0857ms. (50a9e262)
+2020-10-02T14:08:58.2001466+05:30 0HM36LQ4UBK74:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:08:58.2251396+05:30 0HM36LQ4UBK74:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 2545.3094ms (afa2e885)
+2020-10-02T14:08:58.2324329+05:30 0HM36LQ4UBK74:00000003 [INF] Request finished in 2634.8511ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:09:02.0809980+05:30 0HM36LQ4UBK74:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:09:02.0854303+05:30 0HM36LQ4UBK74:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:09:02.0942095+05:30 0HM36LQ4UBK74:00000004 [INF] Request finished in 11.5613ms 204  (791a596a)
+2020-10-02T14:09:02.0997732+05:30 0HM36LQ4UBK74:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:09:02.1076261+05:30 0HM36LQ4UBK74:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:09:02.1161542+05:30 0HM36LQ4UBK74:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:09:02.1294208+05:30 0HM36LQ4UBK74:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:08:47 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:09:04.4561717+05:30 0HM36LQ4UBK74:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:09:04.5622500+05:30 0HM36LQ4UBK74:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:09:11.4708349+05:30 0HM36LQ4UBK74:00000005 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T14:16:24.5487865+05:30 0HM36LUI549C5:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T14:16:24.9066379+05:30 0HM36LUI549C5:00000001 [INF] Request finished in 362.8337ms 404  (791a596a)
+2020-10-02T14:16:57.7436916+05:30 0HM36LUI549C6:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T14:16:57.7565841+05:30 0HM36LUI549C6:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:16:57.8342632+05:30 0HM36LUI549C6:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:16:57.8719428+05:30 0HM36LUI549C6:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T14:16:57.8827438+05:30 0HM36LUI549C6:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T14:16:57.8958060+05:30 0HM36LUI549C6:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T14:16:58.0793856+05:30 0HM36LUI549C6:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 192.0531ms. (50a9e262)
+2020-10-02T14:16:58.1094499+05:30 0HM36LUI549C6:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:16:58.2268514+05:30 0HM36LUI549C6:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 378.6963ms (afa2e885)
+2020-10-02T14:16:58.2499415+05:30 0HM36LUI549C6:00000001 [INF] Request finished in 503.4511ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:17:05.3967147+05:30 0HM36LUI549C6:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T14:17:05.4038993+05:30 0HM36LUI549C6:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:17:05.4102756+05:30 0HM36LUI549C6:00000002 [INF] Request finished in 13.4864ms 204  (791a596a)
+2020-10-02T14:17:05.4169879+05:30 0HM36LUI549C6:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T14:17:05.4244800+05:30 0HM36LUI549C6:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:17:05.4568989+05:30 0HM36LUI549C6:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:17:05.5307217+05:30 0HM36LUI549C6:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:16:57 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:17:07.4038009+05:30 0HM36LUI549C6:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T14:17:07.6487113+05:30 0HM36LUI549C6:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T14:19:37.4503782+05:30 0HM36LUI549C6:00000003 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:19:37.4553804+05:30 0HM36LUI549C6:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 151919.9717ms. (50a9e262)
+2020-10-02T14:19:37.4632177+05:30 0HM36LUI549C6:00000003 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:19:37.4999008+05:30 0HM36LUI549C6:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 152030.9889ms (afa2e885)
+2020-10-02T14:19:37.5114644+05:30 0HM36LUI549C6:00000003 [INF] Request finished in 152088.9683ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:19:44.3976543+05:30 0HM36LUI549C6:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T14:19:44.4035870+05:30 0HM36LUI549C6:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:19:44.4374335+05:30 0HM36LUI549C6:00000004 [INF] Request finished in 14.8775ms 204  (791a596a)
+2020-10-02T14:19:44.4446014+05:30 0HM36LUI549C6:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T14:19:44.4508989+05:30 0HM36LUI549C6:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:19:44.4605036+05:30 0HM36LUI549C6:00000005 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:19:44.4695892+05:30 0HM36LUI549C6:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:16:57 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:19:46.2468339+05:30 0HM36LUI549C6:00000005 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T14:19:46.2607267+05:30 0HM36LUI549C6:00000005 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T14:20:36.4123832+05:30 0HM36LUI549C6:00000005 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:20:36.4165191+05:30 0HM36LUI549C6:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 51937.6976ms. (50a9e262)
+2020-10-02T14:20:36.4238659+05:30 0HM36LUI549C6:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:20:36.4342326+05:30 0HM36LUI549C6:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 51966.9003ms (afa2e885)
+2020-10-02T14:20:36.4502512+05:30 0HM36LUI549C6:00000005 [INF] Request finished in 51999.1267ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:32:52.9301193+05:30 0HM36M7OP8VTH:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2020-10-02T14:32:53.3951523+05:30 0HM36M7OP8VTH:00000001 [INF] Request finished in 465.7332ms 404  (791a596a)
+2020-10-02T14:32:56.5126783+05:30 0HM36M7OP8VTI:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T14:32:56.5300706+05:30 0HM36M7OP8VTI:00000001 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:32:56.6242966+05:30 0HM36M7OP8VTI:00000001 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:32:56.6704197+05:30 0HM36M7OP8VTI:00000001 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T14:32:56.6786763+05:30 0HM36M7OP8VTI:00000001 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T14:32:56.6891809+05:30 0HM36M7OP8VTI:00000001 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T14:32:56.8387662+05:30 0HM36M7OP8VTI:00000001 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 154.7033ms. (50a9e262)
+2020-10-02T14:32:56.8745197+05:30 0HM36M7OP8VTI:00000001 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:32:56.9751737+05:30 0HM36M7OP8VTI:00000001 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 340.2646ms (afa2e885)
+2020-10-02T14:32:56.9921862+05:30 0HM36M7OP8VTI:00000001 [INF] Request finished in 495.955ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:33:06.0087965+05:30 0HM36M7OP8VTI:00000002 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/FetchTrains   (ca22a1cb)
+2020-10-02T14:33:06.0174708+05:30 0HM36M7OP8VTI:00000002 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:33:06.0251293+05:30 0HM36M7OP8VTI:00000002 [INF] Request finished in 14.8793ms 204  (791a596a)
+2020-10-02T14:33:06.0299974+05:30 0HM36M7OP8VTI:00000003 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/FetchTrains application/json 68 (ca22a1cb)
+2020-10-02T14:33:06.0392329+05:30 0HM36M7OP8VTI:00000003 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:33:06.0708936+05:30 0HM36M7OP8VTI:00000003 [INF] Route matched with "{action = \"FetchTrains\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:33:06.1456642+05:30 0HM36M7OP8VTI:00000003 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" with arguments (["{
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:32:56 PM\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:33:08.2203388+05:30 0HM36M7OP8VTI:00000003 [INF] Accessed FetchTrains Method (804477f3)
+2020-10-02T14:33:08.4104062+05:30 0HM36M7OP8VTI:00000003 [INF] Accessed FetchTrains Method in BusinessManager (71dd65d1)
+2020-10-02T14:33:56.7795470+05:30 0HM36M7OP8VTI:00000003 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 50628.3313ms. (50a9e262)
+2020-10-02T14:33:56.7839918+05:30 0HM36M7OP8VTI:00000003 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.TrainDetails, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:33:56.8360260+05:30 0HM36M7OP8VTI:00000003 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchTrains (BookMyTrainAPI)" in 50759.5305ms (afa2e885)
+2020-10-02T14:33:56.8429621+05:30 0HM36M7OP8VTI:00000003 [INF] Request finished in 50812.2666ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:34:03.2498966+05:30 0HM36M7OP8VTI:00000004 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:34:03.2553681+05:30 0HM36M7OP8VTI:00000004 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:34:03.2645202+05:30 0HM36M7OP8VTI:00000004 [INF] Request finished in 11.2293ms 204  (791a596a)
+2020-10-02T14:34:03.2711663+05:30 0HM36M7OP8VTI:00000005 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:34:03.2816157+05:30 0HM36M7OP8VTI:00000005 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:34:03.3001616+05:30 0HM36M7OP8VTI:00000005 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:34:03.3081822+05:30 0HM36M7OP8VTI:00000005 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:32:56 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:34:05.6064952+05:30 0HM36M7OP8VTI:00000005 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:34:05.6463651+05:30 0HM36M7OP8VTI:00000005 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:34:11.3080078+05:30 0HM36M7OP8VTI:00000005 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T14:35:08.5625792+05:30 0HM36M7OP8VTI:00000005 [INF] Error while accessing stations data from database (e2db3371)
+2020-10-02T14:35:08.5698257+05:30 0HM36M7OP8VTI:00000005 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 65253.5335ms. (50a9e262)
+2020-10-02T14:35:08.5776360+05:30 0HM36M7OP8VTI:00000005 [INF] Executing ObjectResult, writing value of type '"System.String"'. (8a1b66c8)
+2020-10-02T14:35:08.5836954+05:30 0HM36M7OP8VTI:00000005 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 65277.7855ms (afa2e885)
+2020-10-02T14:35:08.5921839+05:30 0HM36M7OP8VTI:00000005 [INF] Request finished in 65320.902ms 500 text/plain; charset=utf-8 (791a596a)
+2020-10-02T14:35:13.2643507+05:30 0HM36M7OP8VTI:00000006 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/Trains/BookTicket   (ca22a1cb)
+2020-10-02T14:35:13.2705061+05:30 0HM36M7OP8VTI:00000006 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:35:13.2778514+05:30 0HM36M7OP8VTI:00000006 [INF] Request finished in 13.303ms 204  (791a596a)
+2020-10-02T14:35:13.3119419+05:30 0HM36M7OP8VTI:00000007 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/Trains/BookTicket application/json 175 (ca22a1cb)
+2020-10-02T14:35:13.3173812+05:30 0HM36M7OP8VTI:00000007 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:35:13.3258839+05:30 0HM36M7OP8VTI:00000007 [INF] Route matched with "{action = \"BookTicket\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:35:13.3323447+05:30 0HM36M7OP8VTI:00000007 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" with arguments (["{
+  \"trainId\": 1,
+  \"source\": 1,
+  \"destination\": 3,
+  \"dateOfJourney\": \"10/2/2020, 2:32:56 PM\",
+  \"fromStation\": \"Tirupati\",
+  \"toStation\": \"Bangalore\",
+  \"trainName\": \"TPTY-BLR\",
+  \"trainNumber\": \"124550\"
+}"]) - Validation state: Valid (4e3479ed)
+2020-10-02T14:35:15.0440671+05:30 0HM36M7OP8VTI:00000007 [INF] Accessed BookTicket Method (6b7af686)
+2020-10-02T14:35:15.0892547+05:30 0HM36M7OP8VTI:00000007 [INF] Accessed BookTrain Method in BusinessManager (fc17f471)
+2020-10-02T14:35:23.5326435+05:30 0HM36M7OP8VTI:00000007 [INF] Accessed SendEmail Method in BusinessManager (5c730ff8)
+2020-10-02T14:35:40.1875764+05:30 0HM36M7OP8VTI:00000007 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 26848.6898ms. (50a9e262)
+2020-10-02T14:35:40.1943194+05:30 0HM36M7OP8VTI:00000007 [INF] Executing ObjectResult, writing value of type '"System.Boolean"'. (8a1b66c8)
+2020-10-02T14:35:40.2008279+05:30 0HM36M7OP8VTI:00000007 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.BookTicket (BookMyTrainAPI)" in 26869.1726ms (afa2e885)
+2020-10-02T14:35:40.2095764+05:30 0HM36M7OP8VTI:00000007 [INF] Request finished in 26900.8759ms 200 application/json; charset=utf-8 (791a596a)
+2020-10-02T14:35:40.3950945+05:30 0HM36M7OP8VTI:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/Trains/GetStations   (ca22a1cb)
+2020-10-02T14:35:40.4091337+05:30 0HM36M7OP8VTI:00000008 [INF] Policy execution successful. (0204925d)
+2020-10-02T14:35:40.4166062+05:30 0HM36M7OP8VTI:00000008 [INF] Route matched with "{action = \"FetchStations\", controller = \"Trains\"}". Executing action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" (a44c0341)
+2020-10-02T14:35:40.4336620+05:30 0HM36M7OP8VTI:00000008 [INF] Executing action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" - Validation state: Valid (dad538d7)
+2020-10-02T14:35:40.4451452+05:30 0HM36M7OP8VTI:00000008 [INF] Accessed FetchStations Method (8104a964)
+2020-10-02T14:35:40.4505118+05:30 0HM36M7OP8VTI:00000008 [INF] Accessed FetchStations Method in BusinessManager (6d001715)
+2020-10-02T14:35:40.4586800+05:30 0HM36M7OP8VTI:00000008 [INF] Executed action method "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 14.0769ms. (50a9e262)
+2020-10-02T14:35:40.4634821+05:30 0HM36M7OP8VTI:00000008 [INF] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ModelLayer.Station, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. (8a1b66c8)
+2020-10-02T14:35:40.4704822+05:30 0HM36M7OP8VTI:00000008 [INF] Executed action "BookMyTrainAPI.Controllers.TrainsController.FetchStations (BookMyTrainAPI)" in 42.1208ms (afa2e885)
+2020-10-02T14:35:40.4789735+05:30 0HM36M7OP8VTI:00000008 [INF] Request finished in 124.8577ms 200 application/json; charset=utf-8 (791a596a)

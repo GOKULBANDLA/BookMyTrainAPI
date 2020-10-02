@@ -77,7 +77,11 @@ namespace BookMyTrainAPI.Controllers
                 bool bookingStatus = await _businessManager.BookTrain(source, destination, trainId, dateOfJourney);
                 if (bookingStatus)
                 {
-                  // await _businessManager.SendEmail();
+                    string fromStation = bookingDetails.fromStation;
+                    string toStation = bookingDetails.toStation;
+                    string trainName = bookingDetails.trainName;
+                    string trainNumber = bookingDetails.trainNumber;
+                    _businessManager.SendEmail(fromStation, toStation, trainName,trainNumber, dateOfJourney);
                 }
                 return Ok(bookingStatus);
             }
