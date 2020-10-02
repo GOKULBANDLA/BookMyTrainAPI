@@ -12,7 +12,7 @@ namespace DataLayer
          Task<DataTable> FetchTrains(int source, int destination);
          Task<List<BookingDetails>> FetchBookings(int source, int destination, DateTime datOfJourney);
         Task<List<Station>> FetchStations();
-        Task<bool> BookTrain(int source, int destination, int trainId, DateTime dateOfJourney);
+        Task<bool> BookTrain(TrainBookingDetails bookingDetails);
 
     }
 }

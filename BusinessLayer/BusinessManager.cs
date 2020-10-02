@@ -24,19 +24,19 @@ namespace BusinessLayer
             _logger = logger;
         }
 
-        public async Task<bool> BookTrain(int source, int destination, int trainId, DateTime dateOfJourney)
+        public async Task<bool> BookTrain(TrainBookingDetails bookingDetails)
         {
             _logger.LogInformation("Accessed BookTrain Method in BusinessManager");
             try
             {
-                return await _trainData.BookTrain(source, destination, trainId, dateOfJourney);
+                return await _trainData.BookTrain(bookingDetails);
             }
             catch (Exception)
             {
 
                 throw;
             }
-          
+
         }
 
         public async Task<List<Station>> FetchStations()
@@ -51,7 +51,7 @@ namespace BusinessLayer
 
                 throw;
             }
-          
+
         }
         public async Task<List<TrainDetails>> FetchTrains(int source, int destination, DateTime dateOfJourney)
         {
@@ -81,7 +81,7 @@ namespace BusinessLayer
                     {
                         foreach (var bookings in bookingList)
                         {
-                            if(bookings.TrainId == trains.TrainId)
+                            if (bookings.TrainId == trains.TrainId)
                             {
                                 int seats = bookings.Count;
                                 trains.Seats = trains.Seats - seats;
@@ -100,10 +100,10 @@ namespace BusinessLayer
 
                 throw;
             }
-          
+
         }
 
-        public  bool SendEmail(string source, string destination, string trainName, string trainNumber, DateTime dateOfJourney)
+        public bool SendEmail(TrainBookingDetails bookingDetails)
         {
             _logger.LogInformation("Accessed SendEmail Method in BusinessManager");
             MailMessage mail = new MailMessage();
@@ -114,9 +114,9 @@ namespace BusinessLayer
                 mail.To.Add(new MailAddress("gagangokul1997@gmail.com"));
                 mail.Subject = "Ticket Booking Confirmation";
                 mail.IsBodyHtml = true; //to make message body as html  
-                mail.Body = GetHtmlBody(source,destination,dateOfJourney,trainNumber,trainName);
+                mail.Body = GetHtmlBody(bookingDetails);
                 smtp.Port = 587;
-                smtp.Host = "smtp.gmail.com";   
+                smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
                 smtp.Credentials = new NetworkCredential(_appSettings.Value.Email, _appSettings.Value.Password);
@@ -129,14 +129,14 @@ namespace BusinessLayer
 
                 throw;
             }
-           
+
         }
-        public static string GetHtmlBody(string from,string destination, DateTime dateOfJourney,string trainNumber,string trainName)
+        public static string GetHtmlBody(TrainBookingDetails bookingDetails)
         {
             try
             {
                 string messageBody = "<font>Please find the ticket confirmation: </font><br><br>";
-                if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(destination)) return messageBody;
+                if (bookingDetails == null) return messageBody;
                 string htmlTableStart = "<table style=\"border-collapse:collapse; text-align:center;\" >";
                 string htmlTableEnd = "</table>";
                 string htmlHeaderRowStart = "<tr style=\"background-color:#6FA1D2; color:#ffffff;\">";
@@ -154,19 +154,19 @@ namespace BusinessLayer
                 messageBody += htmlTdStart + "Date Of Journey" + htmlTdEnd;
                 messageBody += htmlTdStart + "Booking Status" + htmlTdEnd;
                 messageBody += htmlHeaderRowEnd;
-               
-                    messageBody = messageBody + htmlTrStart;
-                    messageBody = messageBody + htmlTdStart + trainNumber+ htmlTdEnd;   
-                    messageBody = messageBody + htmlTdStart + trainName + htmlTdEnd;  
-                    messageBody = messageBody + htmlTdStart + from + htmlTdEnd; 
-                    messageBody = messageBody + htmlTdStart + destination+ htmlTdEnd;
-                  messageBody = messageBody + htmlTdStart + dateOfJourney.ToShortDateString() + htmlTdEnd;
+
+                messageBody = messageBody + htmlTrStart;
+                messageBody = messageBody + htmlTdStart + bookingDetails.TrainNumber + htmlTdEnd;
+                messageBody = messageBody + htmlTdStart + bookingDetails.TrainName + htmlTdEnd;
+                messageBody = messageBody + htmlTdStart + bookingDetails.Source + htmlTdEnd;
+                messageBody = messageBody + htmlTdStart + bookingDetails.Destination + htmlTdEnd;
+                messageBody = messageBody + htmlTdStart + DateTime.Parse(bookingDetails.DateOfJourney.ToString())+ htmlTdEnd;
                 messageBody = messageBody + htmlTdStart + "Success" + htmlTdEnd;
                 messageBody = messageBody + htmlTrEnd;
                 messageBody = messageBody + htmlTableEnd;
-                return messageBody; // return HTML Table as string from this function  
+                return messageBody; 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }

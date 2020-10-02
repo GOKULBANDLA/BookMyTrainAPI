@@ -27,7 +27,7 @@ namespace BookMyTrainAPI.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("GetStations")]
-        public async Task<IActionResult>  FetchStations()
+        public async Task<IActionResult> FetchStations()
         {
             _logger.LogInformation("Accessed FetchStations Method");
             try
@@ -38,50 +38,46 @@ namespace BookMyTrainAPI.Controllers
             catch (Exception ex)
             {
                 _logger.LogInformation("Error while accessing stations data from database");
-                return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status500InternalServerError,"There is an error while processing your request");
+                return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status500InternalServerError, "There is an error while processing your request");
             }
 
         }
 
         [HttpPost]
         [Route("FetchTrains")]
-        public async Task<IActionResult> FetchTrains([FromBody] dynamic search )
+        public async Task<IActionResult> FetchTrains([FromBody] TrainSearch search)
         {
             _logger.LogInformation("Accessed FetchTrains Method");
             try
             {
-                int source = (int) search.source;
-                int destination = (int)search.destination;
-                DateTime dateOfJourney = DateTime.Parse(search.dateOfJourney.ToString());
-                var listTrains = await _businessManager.FetchTrains(source,destination,dateOfJourney);
+                int source = (int)search.Source;
+                int destination = (int)search.Destination;
+                DateTime dateOfJourney = DateTime.Parse(search.DateOfJourney.ToString());
+                var listTrains = await _businessManager.FetchTrains(source, destination, dateOfJourney);
                 return Ok(listTrains);
             }
             catch (Exception ex)
             {
-                _logger.LogInformation("Error while accessing stations data from database",ex.Message);
+                _logger.LogInformation("Error while accessing stations data from database", ex.Message);
                 return StatusCode(Microsoft.AspNetCore.Http.StatusCodes.Status500InternalServerError, "There is an error while processing your request");
             }
         }
-
+        /// <summary>
+        /// Book Train ticket and send an email
+        /// </summary>
+        /// <param name="bookingDetails"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("BookTicket")]
-        public async Task<IActionResult> BookTicket([FromBody] dynamic bookingDetails)
+        public async Task<IActionResult> BookTicket([FromBody] TrainBookingDetails bookingDetails)
         {
             _logger.LogInformation("Accessed BookTicket Method");
             try
             {
-                int source = (int)bookingDetails.source;
-                int trainId = (int)bookingDetails.trainId;
-                int destination = (int)bookingDetails.destination;
-                DateTime dateOfJourney = DateTime.Parse(bookingDetails.dateOfJourney.ToString());
-                bool bookingStatus = await _businessManager.BookTrain(source, destination, trainId, dateOfJourney);
+                bool bookingStatus = await _businessManager.BookTrain(bookingDetails);
                 if (bookingStatus)
                 {
-                    string fromStation = bookingDetails.fromStation;
-                    string toStation = bookingDetails.toStation;
-                    string trainName = bookingDetails.trainName;
-                    string trainNumber = bookingDetails.trainNumber;
-                    _businessManager.SendEmail(fromStation, toStation, trainName,trainNumber, dateOfJourney);
+                    _businessManager.SendEmail(bookingDetails);
                 }
                 return Ok(bookingStatus);
             }
@@ -92,7 +88,7 @@ namespace BookMyTrainAPI.Controllers
             }
         }
 
-       
+
     }
 
 }

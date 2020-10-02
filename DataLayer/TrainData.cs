@@ -16,14 +16,14 @@ namespace DataLayer
         {
             _appSettings = app;
         }
-      
-        public async Task<DataTable> FetchTrains(int source,int destination)
+
+        public async Task<DataTable> FetchTrains(int source, int destination)
         {
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(_appSettings.Value.DbConnection))
                 {
-                     await sqlConnection.OpenAsync();
+                    await sqlConnection.OpenAsync();
 
                     SqlDataAdapter da = new SqlDataAdapter("FetchTrains", sqlConnection);
 
@@ -41,19 +41,19 @@ namespace DataLayer
 
                 throw;
             }
-            
+
 
         }
-        public async Task<List<BookingDetails>> FetchBookings(int source, int destination,DateTime date)
+        public async Task<List<BookingDetails>> FetchBookings(int source, int destination, DateTime date)
         {
             List<BookingDetails> lstBookings = new List<BookingDetails>();
-                
+
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(_appSettings.Value.DbConnection))
                 {
                     await sqlConnection.OpenAsync();
-                    string command = "Select trainId,Count(*) as 'count' from Bookings where source=" + source + " and destination=" + destination+" and dateOfJourney = '"+ date.ToString("yyyy-MM-dd")+ "' group by trainId";
+                    string command = "Select trainId,Count(*) as 'count' from Bookings where source=" + source + " and destination=" + destination + " and dateOfJourney = '" + date.ToString("yyyy-MM-dd") + "' group by trainId";
                     SqlCommand cmd = new SqlCommand(command, sqlConnection);
                     SqlDataReader rdr = cmd.ExecuteReader();
 
@@ -93,7 +93,7 @@ namespace DataLayer
                     {
                         Station station = new Station();
                         station.StationId = Convert.ToInt32(rdr["stationId"]);
-                       
+
                         station.StationName = rdr["stationName"].ToString();
                         lstStation.Add(station);
                     }
@@ -108,25 +108,26 @@ namespace DataLayer
             }
         }
 
-        public async Task<bool> BookTrain(int source, int destination, int trainId, DateTime dateOfJourney)
+        public async Task<bool> BookTrain(TrainBookingDetails bookingDetails)
         {
             try
             {
                 using (SqlConnection sqlConnection = new SqlConnection(_appSettings.Value.DbConnection))
                 {
                     await sqlConnection.OpenAsync();
-                    string command = "Insert Into dbo.Bookings (trainId, source, destination, dateOfJourney) " +
-                   "VALUES (@trainId, @source, @destination, @date) ";
+                    string command = "Insert Into dbo.Bookings (trainId, source, destination, dateOfJourney, bookingTime) " +
+                   "VALUES (@trainId, @source, @destination, @date, @bookingTime) ";
                     SqlCommand cmd = new SqlCommand(command, sqlConnection);
-                    cmd.Parameters.Add("@trainId", SqlDbType.Int, 100).Value = trainId;
-                    cmd.Parameters.Add("@source", SqlDbType.Int, 100).Value = source;
-                    cmd.Parameters.Add("@destination", SqlDbType.Int, 100).Value = destination;
-                    cmd.Parameters.Add("@date", SqlDbType.Date, 100).Value = dateOfJourney;
-                   await cmd.ExecuteNonQueryAsync();
+                    cmd.Parameters.Add("@trainId", SqlDbType.Int, 100).Value = bookingDetails.TrainId;
+                    cmd.Parameters.Add("@source", SqlDbType.Int, 100).Value = bookingDetails.SourceId;
+                    cmd.Parameters.Add("@destination", SqlDbType.Int, 100).Value = bookingDetails.DestinationId;
+                    cmd.Parameters.Add("@date", SqlDbType.Date, 100).Value = DateTime.Parse(bookingDetails.DateOfJourney.ToString());
+                    cmd.Parameters.Add("@bookingTime", SqlDbType.DateTime, 100).Value = DateTime.Now.ToString();
+                    await cmd.ExecuteNonQueryAsync();
                     sqlConnection.Close();
                     return true;
                 }
-        
+
             }
             catch (Exception)
             {

@@ -8,7 +8,6 @@ namespace ModelLayer
         public string TrainName { get; set; }
         public int Seats { get; set; }
         public int TrainId { get; set; }
-
         public int RouteId { get; set; }
         public string Source { get; set; }
         public string Destination { get; set; }

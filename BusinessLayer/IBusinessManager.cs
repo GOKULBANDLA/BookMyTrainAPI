@@ -11,7 +11,7 @@ namespace BusinessLayer
     {
         Task<List<TrainDetails>> FetchTrains(int source, int destination, DateTime dateOfJourney);
         Task<List<Station>> FetchStations();
-        Task<bool> BookTrain(int source,int destination,int trainId,DateTime dateOfJourney);
-        bool SendEmail(string source, string destination, string trainName, string trainNumber, DateTime dateOfJourney);
+        Task<bool> BookTrain(TrainBookingDetails bookingDetails);
+        bool SendEmail(TrainBookingDetails bookingDetails);
     }
 }
