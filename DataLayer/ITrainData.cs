@@ -9,8 +9,8 @@ namespace DataLayer
 {
     public interface ITrainData
     {
-         Task<DataTable> FetchTrains(int source, int destination);
-         Task<List<BookingDetails>> FetchBookings(int source, int destination, DateTime datOfJourney);
+         Task<DataTable> FetchTrains(TrainSearch search);
+         Task<List<BookingDetails>> FetchBookings(TrainSearch search);
         Task<List<Station>> FetchStations();
         Task<bool> BookTrain(TrainBookingDetails bookingDetails);
 

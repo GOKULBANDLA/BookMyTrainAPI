@@ -20,7 +20,7 @@ namespace DataLayer
         /// Returns the Trains based on Search Criteria
         /// </summary>
         /// <returns></returns>
-        public async Task<DataTable> FetchTrains(int source, int destination)
+        public async Task<DataTable> FetchTrains(TrainSearch search)
         {
             try
             {
@@ -31,8 +31,8 @@ namespace DataLayer
                     SqlDataAdapter da = new SqlDataAdapter("FetchTrains", sqlConnection);
 
                     da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add("@from", SqlDbType.Int).Value = source;
-                    da.SelectCommand.Parameters.Add("@to", SqlDbType.Int).Value = destination;
+                    da.SelectCommand.Parameters.Add("@from", SqlDbType.Int).Value = search.Source;
+                    da.SelectCommand.Parameters.Add("@to", SqlDbType.Int).Value = search.Destination;
                     DataTable table = new DataTable();
                     da.Fill(table);
 
@@ -51,16 +51,17 @@ namespace DataLayer
         /// Method returns the previous booking details
         /// </summary>
         /// <returns></returns>
-        public async Task<List<BookingDetails>> FetchBookings(int source, int destination, DateTime date)
+        public async Task<List<BookingDetails>> FetchBookings(TrainSearch search)
         {
             List<BookingDetails> lstBookings = new List<BookingDetails>();
-
+            
             try
             {
+                DateTime dateOfJourney = DateTime.Parse(search.DateOfJourney.ToString());
                 using (SqlConnection sqlConnection = new SqlConnection(_appSettings.Value.DbConnection))
                 {
                     await sqlConnection.OpenAsync();
-                    string command = "Select trainId,Count(*) as 'count' from Bookings where source=" + source + " and destination=" + destination + " and dateOfJourney = '" + date.ToString("yyyy-MM-dd") + "' group by trainId";
+                    string command = "Select trainId,Count(*) as 'count' from Bookings where source=" + search.Source + " and destination=" + search.Destination + " and dateOfJourney = '" + dateOfJourney.ToString("yyyy-MM-dd") + "' group by trainId";
                     SqlCommand cmd = new SqlCommand(command, sqlConnection);
                     SqlDataReader rdr = cmd.ExecuteReader();
 

@@ -69,7 +69,7 @@ namespace BusinessLayer
             _logger.LogInformation("Accessed FetchTrains Method in BusinessManager");
             try
             {
-                DataTable dt = await _trainData.FetchTrains(search.Source, search.Destination);
+                DataTable dt = await _trainData.FetchTrains(search);
                 List<TrainDetails> trainDetailslist = new List<TrainDetails>();
                 trainDetailslist = (from DataRow dr in dt.Rows
                                     select new TrainDetails()
@@ -86,7 +86,7 @@ namespace BusinessLayer
                                         IsAvailable = true
                                     }).ToList();
                 DateTime dateOfJourney = DateTime.Parse(search.DateOfJourney.ToString());
-                var bookingList = await _trainData.FetchBookings(search.Source,search.Destination, dateOfJourney);
+                var bookingList = await _trainData.FetchBookings(search);
                 if (bookingList.Count > 0)
                 {
                     foreach (var trains in trainDetailslist)
