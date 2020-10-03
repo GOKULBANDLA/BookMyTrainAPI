@@ -6,6 +6,7 @@ using BusinessLayer;
 using DataLayer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -58,6 +59,9 @@ namespace BookMyTrainAPI
             app.UseHttpsRedirection();
             app.UseCors("CorsPolicy");
             app.UseMvc();
+            app.Run(async (options) => {
+                await options.Response.WriteAsync("Welcome User");
+            });
         }
     }
 }
