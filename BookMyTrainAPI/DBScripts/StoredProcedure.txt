@@ -1,0 +1,63 @@
+Create Procedure [dbo].[FetchTrains] @from int,@to int
+as
+begin
+
+if(@from <> @to)
+Begin
+--- Direct Route
+  Select distinct t.trainId, t.trainName,t.trainNumber,t.seats,sd.id as 'routeId' ,s.stationName as 'source', s1.stationName as 'destination',
+   Convert (varchar(20),Cast (sd.sourceDeparture AS TIME),0) as 'departure', Convert (varchar(20),Cast (sd.destinationArrival AS TIME),0) as 'arrival'
+  from Trains t  join SourceDestination_Mapping sd  on t.sourceDestination = sd.id
+  join Stations s on sd.source = s.stationId  join Stations s1 on sd.destination = s1.stationId where sd.source = @from and
+  sd.destination=@to
+
+  union
+
+  -- Between Stations
+
+Select distinct t.trainId,t.trainName,t.trainNumber,t.seats, sd.id as 'routeId',source.stationName as 'source',  dest.stationName as 'destination',
+  Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'arrival', Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'departure'
+  from Trains t  join SourceDestination_Mapping sd on t.sourceDestination = sd.id
+  join StationRoute_Mapping sr on sr.id = sd.id  join Stations s on sd.source = s.stationId 
+   join Stations s1 on sd.destination = s1.stationId join Stations source on source.stationId = @from  join Stations dest on dest.stationId = @to  where sd.id in
+  (select StationRoute_Mapping.routeId from StationRoute_Mapping where
+StationRoute_Mapping.stationId = @from ) and sd.id in (
+select StationRoute_Mapping.routeId from StationRoute_Mapping where StationRoute_Mapping.stationId = @to
+)
+and ((select arrival from StationRoute_Mapping where routeId = sd.id and stationId=@from) <(select arrival from StationRoute_Mapping 
+where routeId = sd.id and stationId=@to)) 
+
+
+union
+
+--- Source to Between stations
+
+Select distinct t.trainId, t.trainName,t.trainNumber,t.seats,sd.id as 'routeId' ,s.stationName as 'source', dest.stationName as 'destination',
+ Convert (varchar(20),Cast (sd.sourceDeparture AS TIME),0) as 'departure', Convert (varchar(20),Cast (sr.arrival AS TIME),0) as 'arrival'
+  from Trains t  join SourceDestination_Mapping sd  on t.sourceDestination = sd.id
+  join StationRoute_Mapping sr on sr.id = sd.id  join Stations s on sd.source = s.stationId
+    join Stations s1 on sd.destination = s1.stationId join Stations dest on dest.stationId = @to where sd.id in
+(select StationRoute_Mapping.routeId from StationRoute_Mapping where
+StationRoute_Mapping.routeId in(select id from SourceDestination_Mapping where source= @from)) and sd.id in (
+select StationRoute_Mapping.routeId from StationRoute_Mapping where StationRoute_Mapping.stationId = @to
+)
+
+--- Between to Destination
+union
+Select distinct t.trainId, t.trainName,t.trainNumber,t.seats,sd.id as 'routeId',src.stationName as 'source', s1.stationName as 'destination',
+Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'departure', Convert (varchar(20),Cast (sd.destinationArrival AS TIME),0) as 'arrival'
+  from Trains t  join SourceDestination_Mapping sd  on t.sourceDestination = sd.id
+  join StationRoute_Mapping sr on sr.id = sd.id  join Stations s on sd.source = s.stationId
+    join Stations s1 on sd.destination = s1.stationId join Stations src on src.stationId=@from where   sd.id in
+(select StationRoute_Mapping.routeId from StationRoute_Mapping where
+StationRoute_Mapping.routeId in(select id from SourceDestination_Mapping where destination = @to)) and sd.id in (
+select StationRoute_Mapping.routeId from StationRoute_Mapping where StationRoute_Mapping.stationId = @from
+)
+
+end
+else
+return 0
+end
+
+
+

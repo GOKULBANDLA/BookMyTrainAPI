@@ -1,0 +1,130 @@
+
+-- For Database Creation
+Create database TrainBooking
+
+--For Tables Creation
+
+---==================Stations Table========================
+CREATE TABLE [dbo].[Stations](
+	[stationId] [int] IDENTITY(1,1) NOT NULL,
+	[stationName] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_Stations] PRIMARY KEY CLUSTERED 
+(
+	[stationId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--- ===============SourceDestination_Mapping with ForeignKey Mapping===================
+
+CREATE TABLE [dbo].[SourceDestination_Mapping](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[source] [int] NOT NULL,
+	[destination] [int] NOT NULL,
+	[sourceDeparture] [time](7) NOT NULL,
+	[destinationArrival] [time](7) NOT NULL,
+ CONSTRAINT [PK_SourceDestination_Mapping] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+ALTER TABLE [dbo].[SourceDestination_Mapping]  WITH CHECK ADD  CONSTRAINT [FK_SourceDestination_Mapping_Destination] FOREIGN KEY([destination])
+REFERENCES [dbo].[Stations] ([stationId])
+GO
+
+ALTER TABLE [dbo].[SourceDestination_Mapping] CHECK CONSTRAINT [FK_SourceDestination_Mapping_Destination]
+GO
+
+ALTER TABLE [dbo].[SourceDestination_Mapping]  WITH CHECK ADD  CONSTRAINT [FK_SourceDestination_Mapping_SourceStation] FOREIGN KEY([source])
+REFERENCES [dbo].[Stations] ([stationId])
+GO
+
+ALTER TABLE [dbo].[SourceDestination_Mapping] CHECK CONSTRAINT [FK_SourceDestination_Mapping_SourceStation]
+
+
+--=======================StationRoute_Mapping Tablw with ForeignKey Mapping==========================
+
+CREATE TABLE [dbo].[StationRoute_Mapping](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[routeId] [int] NOT NULL,
+	[stationId] [int] NOT NULL,
+	[arrival] [time](7) NULL,
+	[departure] [time](7) NULL,
+ CONSTRAINT [PK_StationRoute_Mapping] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+ALTER TABLE [dbo].[StationRoute_Mapping]  WITH CHECK ADD  CONSTRAINT [FK_StationRoute_Mapping_SD] FOREIGN KEY([routeId])
+REFERENCES [dbo].[SourceDestination_Mapping] ([id])
+GO
+
+ALTER TABLE [dbo].[StationRoute_Mapping] CHECK CONSTRAINT [FK_StationRoute_Mapping_SD]
+GO
+
+ALTER TABLE [dbo].[StationRoute_Mapping]  WITH CHECK ADD  CONSTRAINT [FK_StationRoute_Mapping_Stations] FOREIGN KEY([stationId])
+REFERENCES [dbo].[Stations] ([stationId])
+GO
+
+ALTER TABLE [dbo].[StationRoute_Mapping] CHECK CONSTRAINT [FK_StationRoute_Mapping_Stations]
+GO
+
+
+--===========================Trains Table with ForeignKey Mapping===========================
+
+CREATE TABLE [dbo].[Trains](
+	[trainId] [int] IDENTITY(1,1) NOT NULL,
+	[trainName] [varchar](50) NOT NULL,
+	[trainNumber] [varchar](50) NOT NULL,
+	[sourceDestination] [int] NOT NULL,
+	[seats] [int] NOT NULL,
+ CONSTRAINT [PK_Trains] PRIMARY KEY CLUSTERED 
+(
+	[trainId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+ALTER TABLE [dbo].[Trains]  WITH CHECK ADD  CONSTRAINT [FK_Trains_SourceDestination_Mapping] FOREIGN KEY([sourceDestination])
+REFERENCES [dbo].[SourceDestination_Mapping] ([id])
+GO
+
+ALTER TABLE [dbo].[Trains] CHECK CONSTRAINT [FK_Trains_SourceDestination_Mapping]
+GO
+
+--===========================Bookings Table ===================================================
+
+CREATE TABLE [dbo].[Bookings](
+	[bookingId] [int] IDENTITY(1,1) NOT NULL,
+	[trainId] [int] NOT NULL,
+	[source] [int] NOT NULL,
+	[destination] [int] NOT NULL,
+	[dateOfJourney] [date] NULL,
+	[bookingTime] [datetime] NULL,
+ CONSTRAINT [PK_Bookings] PRIMARY KEY CLUSTERED 
+(
+	[bookingId] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+ALTER TABLE [dbo].[Bookings]  WITH CHECK ADD  CONSTRAINT [FK_Booking_Destination] FOREIGN KEY([destination])
+REFERENCES [dbo].[Stations] ([stationId])
+GO
+
+ALTER TABLE [dbo].[Bookings] CHECK CONSTRAINT [FK_Booking_Destination]
+GO
+
+ALTER TABLE [dbo].[Bookings]  WITH CHECK ADD  CONSTRAINT [FK_Booking_Source] FOREIGN KEY([source])
+REFERENCES [dbo].[Stations] ([stationId])
+GO
+
+ALTER TABLE [dbo].[Bookings] CHECK CONSTRAINT [FK_Booking_Source]
+GO
+
+ALTER TABLE [dbo].[Bookings]  WITH CHECK ADD  CONSTRAINT [FK_Booking_Train] FOREIGN KEY([trainId])
+REFERENCES [dbo].[Trains] ([trainId])
+GO
+
+ALTER TABLE [dbo].[Bookings] CHECK CONSTRAINT [FK_Booking_Train]
+GO
