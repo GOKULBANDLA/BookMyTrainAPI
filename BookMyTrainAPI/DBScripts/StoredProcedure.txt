@@ -15,17 +15,16 @@ Begin
 
   -- Between Stations
 
-Select distinct t.trainId,t.trainName,t.trainNumber,t.seats, sd.id as 'routeId',source.stationName as 'source',  dest.stationName as 'destination',
-  Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'arrival', Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'departure'
-  from Trains t  join SourceDestination_Mapping sd on t.sourceDestination = sd.id
-  join StationRoute_Mapping sr on sr.id = sd.id  join Stations s on sd.source = s.stationId 
-   join Stations s1 on sd.destination = s1.stationId join Stations source on source.stationId = @from  join Stations dest on dest.stationId = @to  where sd.id in
+Select distinct t.trainId,t.trainName,t.trainNumber,t.seats, t.sourceDestination as 'routeId',source.stationName as 'source',  dest.stationName as 'destination',
+  Convert (varchar(20),Cast (sr.departure AS TIME),0) as 'arrival', Convert (varchar(20),Cast (sr.arrival AS TIME),0) as 'departure'
+  from Trains t join StationRoute_Mapping sr on sr.id = t.sourceDestination  
+ join Stations source on source.stationId = @from  join Stations dest on dest.stationId = @to  where t.sourceDestination in
   (select StationRoute_Mapping.routeId from StationRoute_Mapping where
-StationRoute_Mapping.stationId = @from ) and sd.id in (
+StationRoute_Mapping.stationId = @from ) and t.sourceDestination  in (
 select StationRoute_Mapping.routeId from StationRoute_Mapping where StationRoute_Mapping.stationId = @to
 )
-and ((select arrival from StationRoute_Mapping where routeId = sd.id and stationId=@from) <(select arrival from StationRoute_Mapping 
-where routeId = sd.id and stationId=@to)) 
+and ((select arrival from StationRoute_Mapping where routeId = t.sourceDestination and stationId=@from) <(select arrival from StationRoute_Mapping 
+where routeId = t.sourceDestination  and stationId=@to)) 
 
 
 union
