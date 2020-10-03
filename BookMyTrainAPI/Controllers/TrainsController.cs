@@ -42,7 +42,11 @@ namespace BookMyTrainAPI.Controllers
             }
 
         }
-
+        /// <summary>
+        /// REturns trains based on search criteria
+        /// </summary>
+        /// <param name="search"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("FetchTrains")]
         public async Task<IActionResult> FetchTrains([FromBody] TrainSearch search)
@@ -50,10 +54,7 @@ namespace BookMyTrainAPI.Controllers
             _logger.LogInformation("Accessed FetchTrains Method");
             try
             {
-                int source = (int)search.Source;
-                int destination = (int)search.Destination;
-                DateTime dateOfJourney = DateTime.Parse(search.DateOfJourney.ToString());
-                var listTrains = await _businessManager.FetchTrains(source, destination, dateOfJourney);
+                var listTrains = await _businessManager.FetchTrains(search);
                 return Ok(listTrains);
             }
             catch (Exception ex)

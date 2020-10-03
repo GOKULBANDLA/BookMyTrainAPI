@@ -9,7 +9,7 @@ namespace BusinessLayer
 {
     public interface IBusinessManager
     {
-        Task<List<TrainDetails>> FetchTrains(int source, int destination, DateTime dateOfJourney);
+        Task<List<TrainDetails>> FetchTrains(TrainSearch search);
         Task<List<Station>> FetchStations();
         Task<bool> BookTrain(TrainBookingDetails bookingDetails);
         bool SendEmail(TrainBookingDetails bookingDetails);

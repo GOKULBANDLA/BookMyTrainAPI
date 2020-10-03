@@ -16,7 +16,10 @@ namespace DataLayer
         {
             _appSettings = app;
         }
-
+        /// <summary>
+        /// Returns the Trains based on Search Criteria
+        /// </summary>
+        /// <returns></returns>
         public async Task<DataTable> FetchTrains(int source, int destination)
         {
             try
@@ -44,6 +47,10 @@ namespace DataLayer
 
 
         }
+        /// <summary>
+        /// Method returns the previous booking details
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<BookingDetails>> FetchBookings(int source, int destination, DateTime date)
         {
             List<BookingDetails> lstBookings = new List<BookingDetails>();
@@ -75,7 +82,10 @@ namespace DataLayer
             }
 
         }
-
+        /// <summary>
+        /// Returns the list of stations 
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Station>> FetchStations()
         {
             List<Station> lstStation = new List<Station>();
@@ -107,7 +117,10 @@ namespace DataLayer
                 throw;
             }
         }
-
+        /// <summary>
+        /// Insert new ticket booking record into database 
+        /// </summary>
+        /// <returns></returns>
         public async Task<bool> BookTrain(TrainBookingDetails bookingDetails)
         {
             try

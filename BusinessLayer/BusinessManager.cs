@@ -23,7 +23,11 @@ namespace BusinessLayer
             _appSettings = app;
             _logger = logger;
         }
-
+        /// <summary>
+        /// Method will be used for adding booking details
+        /// </summary>
+        /// <param name="bookingDetails"></param>
+        /// <returns></returns>
         public async Task<bool> BookTrain(TrainBookingDetails bookingDetails)
         {
             _logger.LogInformation("Accessed BookTrain Method in BusinessManager");
@@ -38,7 +42,10 @@ namespace BusinessLayer
             }
 
         }
-
+        /// <summary>
+        /// Method used to retrive stations
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Station>> FetchStations()
         {
             _logger.LogInformation("Accessed FetchStations Method in BusinessManager");
@@ -53,12 +60,16 @@ namespace BusinessLayer
             }
 
         }
-        public async Task<List<TrainDetails>> FetchTrains(int source, int destination, DateTime dateOfJourney)
+        /// <summary>
+        /// Returns the list of Trains based on search criteria 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<TrainDetails>> FetchTrains(TrainSearch search)
         {
             _logger.LogInformation("Accessed FetchTrains Method in BusinessManager");
             try
             {
-                DataTable dt = await _trainData.FetchTrains(source, destination);
+                DataTable dt = await _trainData.FetchTrains(search.Source, search.Destination);
                 List<TrainDetails> trainDetailslist = new List<TrainDetails>();
                 trainDetailslist = (from DataRow dr in dt.Rows
                                     select new TrainDetails()
@@ -74,7 +85,8 @@ namespace BusinessLayer
                                         TrainId = Convert.ToInt32(dr["trainId"]),
                                         IsAvailable = true
                                     }).ToList();
-                var bookingList = await _trainData.FetchBookings(source, destination, dateOfJourney);
+                DateTime dateOfJourney = DateTime.Parse(search.DateOfJourney.ToString());
+                var bookingList = await _trainData.FetchBookings(search.Source,search.Destination, dateOfJourney);
                 if (bookingList.Count > 0)
                 {
                     foreach (var trains in trainDetailslist)
@@ -102,7 +114,11 @@ namespace BusinessLayer
             }
 
         }
-
+        /// <summary>
+        /// Method used for sending an email after successful insertion of ticket booking
+        /// </summary>
+        /// <param name="bookingDetails"></param>
+        /// <returns></returns>
         public bool SendEmail(TrainBookingDetails bookingDetails)
         {
             _logger.LogInformation("Accessed SendEmail Method in BusinessManager");
@@ -131,6 +147,11 @@ namespace BusinessLayer
             }
 
         }
+        /// <summary>
+        /// Method used for parsing Email HTML Body
+        /// </summary>
+        /// <param name="bookingDetails"></param>
+        /// <returns></returns>
         public static string GetHtmlBody(TrainBookingDetails bookingDetails)
         {
             try
